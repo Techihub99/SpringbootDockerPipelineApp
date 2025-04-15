@@ -18,7 +18,7 @@ pipeline {
        stage('Push image to Hub'){
             steps{
                 script{
-                  withCredentials([usernamePassword(credentialsId: 'javatechihub', passwordVariable: 'javatechihub', usernameVariable: 'thrishank99')]) {
+                  withCredentials([usernamePassword(credentialsId: 'srinudockerhubtest', passwordVariable: 'javatechihub', usernameVariable: 'thrishank99')]) {
                   bat "docker login -u ${env.thrishank99} -p ${env.javatechihub}"
 }
                   bat 'docker push thrishank99/springboot-docker-jenkin-javatechipipeline'
