@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: SpringbootDockerJenkinPipelineProject
+  datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USER:root}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/mytest?useSSL=false&allowPublicKeyRetrieval=true
+    password: ${MYSQL_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+#  profiles:
+#    active:
+#    - test
+logging:
+  file:
+    name: C:/Users/Home/Desktop/logs/springbootapplication.log
+management:
+  tracing:
+    sampling:
+      probability: 1.0
